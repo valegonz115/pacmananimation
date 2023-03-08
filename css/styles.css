@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 't';
+    src: url('../fonts/upheavtt.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: 't';
+}
+
+.fondo {
+    background-image: url(../images/29625-pacman.png);
+    background-size: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+}
+
+.pacmanmotion {
+    position: relative;
+    animation: pacman 15s infinite;
+    display: flex;
+}
+
+.titulos {
+    color: yellow;
+}
+
+video {
+    opacity: 0.2;
+    position: relative;
+    bottom: -600px;
+}
+
+@keyframes pacman {
+    0%          {top: 29px; left: 0px; rotate: 0deg;}
+    5%          {top: 29px; left: 219px; rotate: 0deg;}
+    8%          {rotate: 90deg;}
+    10%         {top: 105px; left: 219px; rotate: 0deg;}
+    20%         {top: 105px; left: 615px; rotate: 0deg;}
+    22%, 25%    {rotate: 90deg;}
+    26%         {top: 162px; left: 615px; rotate: 90deg;}
+    27%, 30%    {rotate: 0deg;}
+    31%         {top: 162px; left: 615px; rotate: 0deg;}
+    32%, 35%    {rotate: 0deg;}
+    36%         {top: 162px; left: 670px; rotate: 90deg;}
+    37%, 38%    {top: 221px; left: 670px;}
+    39%         {top: 221px; left: 670px; rotate: 90deg;}
+    40%         {top: 221px; rotate: 90deg;}
+    41%         {rotate:0deg;}
+    42%         {top: 221px; left: 727px; rotate:0deg;}
+  }
+
+
+  /*ACA COLOCO MEDIAQUERIES*/
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    .fondo {
+        background-image: url(../fonts/360_F_389887722_vwO9daKMuYWR2vhIOtS1YFaKe1aFVuvG.jpg);
+        background-size: cover;
+        width: 700px;
+        height: 100vh;
+        background-repeat: no-repeat;
+    
+    }
+    @keyframes pacman {
+        0%  {top: 0px; left: 0px;}
+        40% {top: 184px; left: 91px;}
+        45% {left: 91px; top: 184px;}
+        50% {top: 210px; }
+        100% {top: 210px; left: 700px; rotate: 0deg;}
+        
+    }
+}
+
+.centrar {
+    display: flex !important;
+    justify-content: center !important;
+}
